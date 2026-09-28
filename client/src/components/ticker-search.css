@@ -1,0 +1,98 @@
+.tsearch {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+.tsearch-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--ink-3);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.tsearch.compact .tsearch-input {
+  height: 38px;
+}
+.tsearch-input:focus-within {
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px var(--brass-bg);
+  color: var(--ink);
+}
+.tsearch-input input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 14.5px;
+  color: var(--ink);
+  min-width: 0;
+}
+.tsearch-input input::placeholder {
+  color: var(--ink-3);
+}
+.tsearch-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 60;
+  max-height: 360px;
+  overflow: auto;
+}
+.tsearch-list li {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.tsearch-list li.active {
+  background: var(--bg-3);
+}
+.tsearch-sym {
+  font-weight: 600;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tsearch-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.tsearch-meta {
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.tsearch-empty {
+  padding: 12px;
+  color: var(--ink-3);
+  font-size: 13.5px;
+  display: block !important;
+}
+@media (max-width: 640px) {
+  .tsearch-list li {
+    grid-template-columns: 80px 1fr;
+  }
+  .tsearch-meta {
+    display: none;
+  }
+}

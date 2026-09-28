@@ -1,0 +1,137 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Bearings design tokens
+   Light = "daylight almanac": cream paper, navy ink, brass accents.
+   Dark  = "night watch": deep navy, cream ink, brighter brass.
+   Chart series colours are validated for colour-vision deficiency on each surface.
+   ──────────────────────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* surfaces */
+  --bg: #f7f2e8;
+  --bg-2: #fffdf8;
+  --bg-3: #efe7d6;
+  --bg-4: #e6dcc6;
+  --bg-ink: #14202e;
+  --bg-ink-2: #1c2b3d;
+
+  /* ink */
+  --ink: #14202e;
+  --ink-2: #4b5665;
+  --ink-3: #7e8794;
+  --ink-4: #a9b0ba;
+  --ink-inv: #f7f2e8;
+
+  /* lines */
+  --line: rgba(20, 32, 46, 0.12);
+  --line-2: rgba(20, 32, 46, 0.24);
+  --line-soft: rgba(20, 32, 46, 0.07);
+
+  /* brand */
+  --brass: #a8741a;
+  --brass-2: #c9a24a;
+  --brass-3: #e6cf8f;
+  --brass-ink: #7a5310;
+  --brass-bg: rgba(168, 116, 26, 0.12);
+  --navy: #14202e;
+  --blue: #1f5aa6;
+
+  /* status: always paired with an icon or word, never colour alone */
+  --good: #1f7a3a;
+  --good-bg: rgba(31, 122, 58, 0.11);
+  --warn: #9a6512;
+  --warn-bg: rgba(183, 121, 31, 0.14);
+  --bad: #b3362f;
+  --bad-bg: rgba(179, 54, 47, 0.11);
+  --info: #1f5aa6;
+  --info-bg: rgba(31, 90, 166, 0.1);
+
+  /* stance colours */
+  --stance-accumulate: #1f7a3a;
+  --stance-steady: #1f5aa6;
+  --stance-patience: #9a6512;
+  --stance-caution: #b3362f;
+
+  /* chart series (validated on #f7f2e8) */
+  --s1: #1f5aa6;
+  --s2: #c2620d;
+  --s3: #12876f;
+  --s4: #6f4bd0;
+  --s5: #c6446a;
+  --s6: #4f7d12;
+  --series-muted: #b8b0a0;
+  --chart-surface: #fffdf8;
+  --grid: #e7dfcd;
+  --axis: #cfc5ae;
+
+  --shadow-1: 0 1px 2px rgba(20, 32, 46, 0.05), 0 6px 20px -12px rgba(20, 32, 46, 0.18);
+  --shadow-2: 0 2px 4px rgba(20, 32, 46, 0.06), 0 18px 40px -18px rgba(20, 32, 46, 0.28);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+
+  --sidebar-w: 248px;
+  --content-max: 1240px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0c1522;
+  --bg-2: #111c2b;
+  --bg-3: #172538;
+  --bg-4: #1f3048;
+  --bg-ink: #f3ecdf;
+  --bg-ink-2: #e6dcc6;
+
+  --ink: #f3ecdf;
+  --ink-2: #bdb6a7;
+  --ink-3: #85837b;
+  --ink-4: #5d6270;
+  --ink-inv: #0c1522;
+
+  --line: rgba(243, 236, 223, 0.12);
+  --line-2: rgba(243, 236, 223, 0.24);
+  --line-soft: rgba(243, 236, 223, 0.06);
+
+  --brass: #d9a441;
+  --brass-2: #e8bd6a;
+  --brass-3: #f2d99a;
+  --brass-ink: #f0c66b;
+  --brass-bg: rgba(217, 164, 65, 0.14);
+  --navy: #f3ecdf;
+  --blue: #5b93e6;
+
+  --good: #3fae5a;
+  --good-bg: rgba(63, 174, 90, 0.14);
+  --warn: #d9a441;
+  --warn-bg: rgba(217, 164, 65, 0.14);
+  --bad: #e0645c;
+  --bad-bg: rgba(224, 100, 92, 0.14);
+  --info: #5b93e6;
+  --info-bg: rgba(91, 147, 230, 0.14);
+
+  --stance-accumulate: #3fae5a;
+  --stance-steady: #5b93e6;
+  --stance-patience: #d9a441;
+  --stance-caution: #e0645c;
+
+  /* chart series (validated on #111c2b) */
+  --s1: #4a86dd;
+  --s2: #cf7a2a;
+  --s3: #22a383;
+  --s4: #7d5fe0;
+  --s5: #d1568a;
+  --s6: #6ea02e;
+  --series-muted: #4a5568;
+  --chart-surface: #111c2b;
+  --grid: #1c2a3d;
+  --axis: #2b3b53;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.35), 0 20px 48px -18px rgba(0, 0, 0, 0.7);
+}
