@@ -444,7 +444,7 @@ function ProjectionCard({ a }: { a: Analysis }) {
 
   return (
     <Card className="rise d4" title="Range of outcomes" eyebrow="Not a forecast" subtitle="Thousands of simulated futures using an assumed average return and this asset's historical bumpiness. The spread matters more than the middle line.">
-      <div className="grid" style={{ gridTemplateColumns: "minmax(240px, 300px) 1fr", gap: 24 }}>
+      <div className="grid proj-grid">
         <div className="col" style={{ gap: 14 }}>
           <Slider label="Starting amount" value={initial} min={0} max={50000} step={100} onChange={setInitial} format={(v) => money(v, "USD", { digits: 0 })} />
           <Slider label="Monthly contribution" value={monthly} min={0} max={2000} step={10} onChange={setMonthly} format={(v) => money(v, "USD", { digits: 0 })} />

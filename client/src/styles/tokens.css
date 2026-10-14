@@ -75,7 +75,10 @@
   --radius-xs: 6px;
 
   --sidebar-w: 248px;
-  --content-max: 1240px;
+  /* Let the app fill the window. Reading-width is capped per component where it
+     matters (.prose is 68ch, .settings-grid 860px), not by the shell.
+     Set a px value here to centre the app in a fixed column again. */
+  --content-max: none;
 }
 
 :root[data-theme="dark"] {

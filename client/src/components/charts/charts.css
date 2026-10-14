@@ -240,6 +240,12 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  max-width: 100%;
+}
+/* The dial is drawn at 300px but has a viewBox, so let it scale down to fit. */
+.dial svg {
+  max-width: 100%;
+  height: auto;
 }
 .dial-needle {
   transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);

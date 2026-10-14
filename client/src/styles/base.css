@@ -263,6 +263,17 @@ button {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+/* Title text must be allowed to shrink, or long headings push the card wide. */
+.card-title > .col {
+  min-width: 0;
+  flex: 1 1 200px;
+}
+.card-title > .row {
+  min-width: 0;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 .card-title h3 {
   font-size: 1.05rem;
@@ -548,10 +559,19 @@ button {
   border-radius: 999px;
   background: var(--bg-3);
   border: 1px solid var(--line);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 .tabs button {
   border: 0;
   background: transparent;
+  flex: none;
+  white-space: nowrap;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 13px;
@@ -683,4 +703,17 @@ button {
 .prose strong {
   font-weight: 650;
   color: var(--ink);
+}
+
+/* ── narrow screens ─────────────────────────────────────────────────────── */
+/* Must come after .btn, which sets white-space: nowrap. Buttons are nowrap
+   pills on desktop; on a phone a long label (e.g. a lesson title) has to wrap
+   rather than push the whole page sideways. */
+@media (max-width: 640px) {
+  .btn {
+    white-space: normal;
+    max-width: 100%;
+    line-height: 1.25;
+    text-align: center;
+  }
 }

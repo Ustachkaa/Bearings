@@ -140,6 +140,7 @@
   padding: 14px 28px;
   position: sticky;
   top: 0;
+  min-width: 0;
   z-index: 30;
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   backdrop-filter: blur(10px);
@@ -151,6 +152,15 @@
   align-items: center;
   gap: 6px;
   position: relative;
+  flex: none;
+}
+.topbar > .menu-btn {
+  flex: none;
+}
+/* The search bar is the only part of the bar that should give way. */
+.topbar > .tsearch {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .bell-dot {
   position: absolute;
@@ -211,6 +221,7 @@
   }
   .topbar {
     padding: 10px 16px;
+    gap: 10px;
   }
   .content {
     padding: 20px 16px 40px;
